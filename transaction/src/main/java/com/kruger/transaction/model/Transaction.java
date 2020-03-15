@@ -3,12 +3,7 @@ package com.kruger.transaction.model;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 @Entity
@@ -40,7 +35,8 @@ public class Transaction {
     private long amount;
     @Column(name = "amount_other", nullable = false)
     private long amountOther;
+    @Transient
+    private long balanceAmount;
     @Column(name="transaction_type", nullable = false)
     private TRANSACTIONTYPE transactiontype;
-
 }
