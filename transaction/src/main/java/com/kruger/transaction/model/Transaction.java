@@ -40,5 +40,7 @@ public class Transaction {
     private long amount;
     @Column(name = "amount_other", nullable = false)
     private long amountOther;
+    @Column(name="transaction_type", nullable = false)
+    private TRANSACTIONTYPE transactiontype;
 
 }
