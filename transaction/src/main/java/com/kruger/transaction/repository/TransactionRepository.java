@@ -24,5 +24,5 @@ public interface TransactionRepository extends CrudRepository<Transaction, Long>
     public List<Transaction> findTransactionByPosIdAndOperatorId(String posId, String operatorId);
 
     @Query("SELECT * FROM transaction WHERE transactionId = $1")
-    public Transaction findByTransactionId(String transactionId);
+    public Transaction findByTransactionId(long transactionId);
 }

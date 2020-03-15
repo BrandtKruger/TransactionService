@@ -35,7 +35,11 @@ public class TransactionService {
         return transactionRepository.findTransactionByPosIdAndOperatorId(posId, operatorId);
     }
 
-    public Transaction findByTransactionId(String transactionId){
+    public Transaction findByTransactionId(long transactionId){
         return transactionRepository.findByTransactionId(transactionId);
+    }
+
+    public List<Transaction> findAll() {
+        return (List<Transaction>) transactionRepository.findAll();
     }
 }
